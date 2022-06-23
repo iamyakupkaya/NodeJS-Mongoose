@@ -64,6 +64,11 @@ Blog.basligaGoreVeri("İlk blog")
   .catch((err) => console.log(err));
 console.log(myBlog.baslikGoster());
 //myBlog2.save();
+
+//ayrıca Sınıf üzerinden Blog.create metodu ile data kayıt edebilirz.
+//bir promise döndürür ve bu şekilde ekrana dönen objeyi tmamiyle döndürebilirz bu da aynı zamanda
+// ... şemayı kullanılıyor sadece bilgi girme şekli farklı yoksa belirlediğimiz alanların aynısı vardır
+Blog.create({ title: "üçüncü title" }).then((result) => console.log(result));
 myBlog
   .save()
   .then((result) => console.log(result))
